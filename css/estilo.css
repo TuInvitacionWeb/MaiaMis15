@@ -254,11 +254,11 @@
         }
 
         .mensaje-final {
-            display: flex;
+            display: none; /* Oculto por defecto */
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: #4C7031; /* Verde más oscuro para diferenciar */
+            background: #4C7031; /* Verde más oscuro */
             color: white;
             font-size: 40px;
             font-weight: bold;
@@ -268,20 +268,16 @@
             margin: 20px auto;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            transform: scale(0);
             opacity: 0;
-            transition: all 0.5s ease-in-out;
+            transform: scale(0.8);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
         }
         
-        /* Clase para mostrar el mensaje con animación */
+        /* Clase que se agregará dinámicamente para mostrar el mensaje */
         .mostrar {
+            display: flex;
             transform: scale(1);
             opacity: 1;
-        }
-        
-        /* Ocultar por defecto */
-        .oculto {
-            display: none;
         }
         
 
