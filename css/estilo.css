@@ -22,7 +22,7 @@
             background: linear-gradient( rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("../img/fondo2.jpg");
             background-size: cover;
             background-position: center center;
-            height: 130vh;
+            height: 140vh;
             justify-content: center;
             align-items: center;
         }
@@ -277,6 +277,7 @@
         .mostrar {
             transform: scale(1);
             opacity: 1;
+            display: block !important;
         }
         
         /* Ocultar por defecto */
