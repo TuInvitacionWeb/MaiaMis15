@@ -123,7 +123,8 @@
             text-decoration-color: #82A46B; /* Color del subrayado a juego con el tema */
             margin-bottom: 20px; /* Espaciado inferior */
             margin-top: 280px;
-            
+            position: relative; /* Posición relativa para el seudoelemento */
+            top: 10px; /* Ajusta según necesites */
         }
         
         #inicio .contenido .presentacion h2 {
@@ -260,10 +261,10 @@
             text-align: center;
             background: #4C7031; /* Verde más oscuro para diferenciar */
             color: white;
-            font-size: 40px;
+            font-size: 30px;
             font-weight: bold;
             font-family: "Higuen Elegant Serif"; /* Misma fuente */
-            width: 400px;
+            width: 300px;
             height: 200px;
             margin: 20px auto;
             border-radius: 10px;
