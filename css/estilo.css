@@ -313,12 +313,7 @@
             text-align: center;
         }
 
-        #sobremi .contenedor-video {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px; /* Espaciado entre el video y el botón */
-        }
+       
 
         #sobremi .Tittulo-seccion {
             font-size: 23px; /* Tamaño más destacado */
@@ -349,27 +344,7 @@
             text-decoration-color: #82A46B; /* Color del subrayado a juego con el tema */
         }
 
-        /* Marco decorativo */
-        .marco-flores {
-            position: relative;
-            width: 520px; /* Ajusta para adaptarlo al video (ancho del video + padding) */
-            height: 410px; /* Ajusta para adaptarlo al video (alto del video + padding) */
-            padding: 10px; /* Espacio para el borde */
-            background: url('../img/marco2.jpg') no-repeat center;
-            background-size: cover;
-            border-radius: 20px; /* Bordes suaves */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* Aseguramos que el video esté bien posicionado dentro del marco */
-        .marco-flores video {
-            border-radius: 15px; /* Bordes suaves para el video */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-
+        
         .contenido-ubicacion .col img {
             border-radius: 12%; /* Redondea completamente la imagen */
             width: 300px; /* Ajusta el tamaño si es necesario */
@@ -386,9 +361,6 @@
             
         }
 
-        
-
-
         /* Flex container para centrar ambas secciones horizontalmente */
         .contenedor-central {
             display: flex;
@@ -397,13 +369,6 @@
             gap: 30px; /* Espaciado entre el video y el mapa */
             margin-top: 20px; /* Ajusta si es necesario */
             
-        }
-
-        /* Estilos opcionales para mejorar el diseño */
-        .contenedor-video, .contenido-ubicacion {
-            flex: 1; /* Cada sección ocupa el mismo espacio disponible */
-            max-width: 50%; /* Evitar que se estiren demasiado */
-            text-align: center; /* Asegura el centrado del contenido */
         }
 
         .info-container {
@@ -429,7 +394,49 @@
             color: #ffffff;
         }
 
-        
+        /* CARRUSEL */
+
+        .contenedor-carrusel {
+            width: 300px; /* Ajusta según el diseño */
+            overflow: hidden;
+            position: relative;
+        }
+
+        .carrusel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .marco {
+            min-width: 100%;
+            box-sizing: border-box;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Botones */
+        .botones {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .boton {
+            background: #5D774E;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            margin: 5px;
+        }
+
+        .boton:hover {
+            background: #4a5e3d;
+        }
+
+
+
 
         /* *********************/
         /* seccion REGALO */

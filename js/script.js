@@ -21,9 +21,6 @@ function copyAlias() {
     });
 }
 
-
-
-
 //función que muestra el menu responsive
 function responsiveMenu() {
     var x = document.getElementById("nav");
@@ -33,3 +30,27 @@ function responsiveMenu() {
         x.className = "";
     }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const carrusel = document.querySelector('.carrusel');
+    const totalMarcos = document.querySelectorAll(".marco").length;
+    let indice = 0;
+
+    function actualizarCarrusel() {
+        carrusel.style.transform = `translateX(${-indice * 100}%)`;
+    }
+
+    document.querySelector(".boton-siguiente").addEventListener("click", () => {
+        indice = (indice + 1) % totalMarcos;
+        actualizarCarrusel();
+    });
+
+    document.querySelector(".boton-anterior").addEventListener("click", () => {
+        indice = (indice - 1 + totalMarcos) % totalMarcos;
+        actualizarCarrusel();
+    });
+});
+
+
+
+        
