@@ -33,23 +33,27 @@ function responsiveMenu() {
 
 document.addEventListener("DOMContentLoaded", function () {
     const carrusel = document.querySelector('.carrusel');
-    const totalMarcos = document.querySelectorAll(".marco").length;
+    const btnAnterior = document.querySelector(".boton-anterior");
+    const btnSiguiente = document.querySelector(".boton-siguiente");
+    const tarjetas = document.querySelectorAll(".marco-invitacion");
+    const totalMarcos = tarjetas.length; // Definir el total de tarjetas
     let indice = 0;
 
     function actualizarCarrusel() {
         carrusel.style.transform = `translateX(${-indice * 100}%)`;
     }
 
-    document.querySelector(".boton-siguiente").addEventListener("click", () => {
+    btnSiguiente.addEventListener("click", () => {
         indice = (indice + 1) % totalMarcos;
         actualizarCarrusel();
     });
 
-    document.querySelector(".boton-anterior").addEventListener("click", () => {
+    btnAnterior.addEventListener("click", () => {
         indice = (indice - 1 + totalMarcos) % totalMarcos;
         actualizarCarrusel();
     });
 });
+
 
 
 
