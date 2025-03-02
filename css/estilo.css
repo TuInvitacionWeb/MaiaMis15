@@ -893,7 +893,9 @@
             .alias-container {
                 width: 90%;
                 padding: 8px;
-               
+            }
+            #aliasText {
+                font-size: 14px; /* Reducir tamaño de fuente */
             }
             .copy-btn {
                 font-size: 12px; /* Reducir tamaño del texto */
