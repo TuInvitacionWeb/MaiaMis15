@@ -44,12 +44,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     btnSiguiente.addEventListener("click", () => {
-        indice = (indice + 1) % totalMarcos;
+        if (indice < totalMarcos - 1) {
+            indice++;
+        } else {
+            indice = 0; // Reinicia al inicio si llega al final
+        }
         actualizarCarrusel();
     });
 
     btnAnterior.addEventListener("click", () => {
-        indice = (indice - 1 + totalMarcos) % totalMarcos;
+        if (indice > 0) {
+            indice--;
+        } else {
+            indice = totalMarcos - 1; // Vuelve al final si está en el inicio
+        }
         actualizarCarrusel();
     });
 });
