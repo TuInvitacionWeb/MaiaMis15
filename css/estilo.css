@@ -859,11 +859,8 @@
                 flex-direction:column; /* Apilar elementos en columna */
                 align-items: center;
             }
-            video{
-                 /* Ajustar ancho para pantallas más pequeñas */
-                 height: 300px;
-            }
-            .marco-flores {
+            
+            .marco-invitacion {
                 width: 90%; /* Ajustar ancho para pantallas más pequeñas */
                 height: 110%;
             }
