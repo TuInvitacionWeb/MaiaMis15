@@ -871,6 +871,10 @@
             .info-container {
                 font-size: 14px; /* Reducir texto para móviles */
             }
+
+            .info-container .info-item {
+                font-size: 12px; /* Reducir tamaño del texto */
+            }
             
 
 
