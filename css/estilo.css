@@ -708,6 +708,29 @@
             color: #fff;
         }
 
+        /* *********************/
+        /* seccion Final */
+        /* *********************/
+
+        #final {
+            background-color: #82A46B;
+            text-align: center;
+            padding: 13px 0;
+            height: 15vh;
+        }
+        #final h2 {
+            color: #fff;
+            font-family: "Higuen Elegant Serif", serif;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        #final p {
+            color: #fff;
+            font-family: "Higuen Elegant Serif", serif;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
         /**********************/
     
         footer{
@@ -722,6 +745,9 @@
             display: inline-block;
             margin: 5px;
             font-size: 26px;
+        }
+        footer p{
+            color: #fff;
         }
 
         /* *********************/
