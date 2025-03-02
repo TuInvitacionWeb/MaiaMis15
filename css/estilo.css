@@ -822,7 +822,7 @@
             }
 
             .redes {
-                display: flex;
+                display: none;
             }
             nav {
                 display: none;
@@ -940,7 +940,9 @@
             footer {
                 padding: 20px 0; /* Ajusta el padding para pantallas más pequeñas */
             }
-        
+            footer .redes {
+                display: flex;
+            } 
             footer a {
                 font-size: 20px; /* Reduce el tamaño de los iconos */
                 margin: 10px;    /* Aumenta el espacio entre los iconos */
