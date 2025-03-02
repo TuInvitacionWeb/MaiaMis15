@@ -889,6 +889,10 @@
                 font-size: 25px; /* Reducir tamaño de fuente */
                 padding: auto;
             }
+            #regalo .sobremi .marco{
+                padding: 10px; /* Ajustar el padding */
+                max-width: 90%; /* Ajustar el ancho */
+            }
         
             .alias-container {
                 width: 90%;
