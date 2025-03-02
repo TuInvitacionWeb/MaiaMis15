@@ -849,6 +849,10 @@
             #inicio .contenido .presentacion h2 {
                 font-size: 40px;
             }
+            .contenedor-confirmacion{
+                font-size: 15px;
+                width: 90%;
+            }
 
 
             /* SECCION INVITACION */
@@ -874,6 +878,11 @@
 
             .info-container .info-item {
                 font-size: 12px; /* Reducir tamaño del texto */
+            }
+
+            /* CARRUSEL */
+            .contenedor-carrusel {
+                max-width: 82%; /* Ajustar el ancho del carrusel */
             }
             
 
