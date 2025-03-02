@@ -146,8 +146,9 @@
             font-size: 18px;
             text-align: center;
             font-family: "Higuen Elegant Serif";
+            color: #f3f3f3;
         }
-        
+    
         #inicio .contenido .presentacion a {
             text-decoration: none;
             display: inline-block;
