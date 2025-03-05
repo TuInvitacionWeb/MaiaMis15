@@ -371,6 +371,15 @@
             text-decoration-color: #82A46B; /* Color del subrayado a juego con el tema */
         }
 
+        .contenido-ubicacion{
+            opacity: 0;
+            transition: opacity 2s ease-out, transform 2s ease-out;
+        }
+
+        .contenido-ubicacion.mostrar{
+            opacity: 1;
+        }
+
         
         .contenido-ubicacion .col img {
             border-radius: 12%; /* Redondea completamente la imagen */
@@ -429,6 +438,13 @@
             max-width: 600px; /* Evita que el carrusel sea más grande de lo necesario */
             overflow: hidden; /* Evita que se vean elementos fuera del carrusel */
             position: relative;
+            opacity: 0;
+            transition: opacity 2s ease-out, transform 2s ease-out;
+        }
+
+        .contenedor-carrusel.mostrar {
+            opacity: 1;
+            transform: translateX(0);
         }
 
         .carrusel {
@@ -556,6 +572,15 @@
             margin-right: 40px;
         }
 
+        .contenedor-foto{
+            opacity: 0;
+            transition: opacity 2s ease-out, transform 2s ease-out;
+        }
+
+        .contenedor-foto.mostrar{
+            opacity: 1;
+        }
+
         #regalo .contenedor-foto img {
             padding: 20px;
             max-width: 100%;
@@ -569,6 +594,15 @@
             align-items: center; /* Centra el texto verticalmente */
             text-align: center; /* Centra el texto */
             color: #fff;
+        }
+
+        .sobremi{
+            opacity: 0;
+            transition: opacity 2s ease-out, transform 2s ease-out;
+        }
+
+        .sobremi.mostrar{
+            opacity: 1;
         }
 
         #regalo .sobremi h2 {
@@ -690,6 +724,15 @@
         #contacto .contenedor-form {
             max-width: 1100px;
             margin: auto;
+        }
+
+        .contenedor-form{
+            opacity: 0;
+            transition: opacity 2s ease-out, transform 2s ease-out;
+        }
+
+        .contenedor-form.mostrar{
+            opacity: 1;
         }
         
         #contacto .contenedor-form .fila {

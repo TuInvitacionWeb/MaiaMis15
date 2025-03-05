@@ -62,7 +62,83 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const contenedorCarrusel = document.querySelector(".contenedor-carrusel");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                contenedorCarrusel.classList.add("mostrar");
+            }
+        });
+    }, {
+        threshold: 0.3 // Se activa cuando el 30% del elemento es visible
+    });
+
+    observer.observe(contenedorCarrusel);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const contenidoUbicacion = document.querySelector(".contenido-ubicacion");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                contenidoUbicacion.classList.add("mostrar");
+            }
+        });
+    }, {
+        threshold: 0.3 // Se activa cuando el 30% del elemento es visible
+    });
+
+    observer.observe(contenidoUbicacion);
+});
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const contenedorFoto = document.querySelector(".contenedor-foto");
 
-        
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                contenedorFoto.classList.add("mostrar");
+            }
+        });
+    }, {
+        threshold: 0.3 // Se activa cuando el 30% del elemento es visible
+    });
+
+    observer.observe(contenedorFoto);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const sobremi = document.querySelector(".sobremi");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                sobremi.classList.add("mostrar");
+            }
+        });
+    }, {
+        threshold: 0.3 // Se activa cuando el 30% del elemento es visible
+    });
+
+    observer.observe(sobremi);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const contenedorForm = document.querySelector(".contenedor-form");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                contenedorForm.classList.add("mostrar");
+            }
+        });
+    }, {
+        threshold: 0.3 // Se activa cuando el 30% del elemento es visible
+    });
+
+    observer.observe(contenedorForm);
+});
