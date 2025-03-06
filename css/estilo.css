@@ -16,30 +16,6 @@
         }
 
 
-        @keyframes show {
-            from {
-                opacity: 0;
-                transform: scale(0.25); /* Reducido a 25% */
-            }
-            to {
-                opacity: 1;
-                transform: scale(1); /* Escala normal */
-            }
-        }
-        
-
-        img {
-            view-timeline-name: --image;
-            view-timeline-axis: block;
-        
-            animation-timeline: --image;
-            animation-name: show;
-        
-            animation-range: entry 25% cover 30%;
-            animation-fill-mode: both;
-        }
-        
-
         /* *********************/
         /* seccion inicio */
         /* *********************/
@@ -464,7 +440,7 @@
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
             font-family: 'Playfair Display', serif; /* Fuente elegante */
             position: relative; /* Posición relativa para los seudoelementos */
-        }
+        }   
 
         .marco-invitacion::before,
         .marco-invitacion::after {
@@ -786,29 +762,6 @@
         #contacto .btn-enviar:hover {
             background-color: #82A46B;
             color: #fff;
-        }
-
-        /* *********************/
-        /* seccion Final */
-        /* *********************/
-
-        #final {
-            background-color: #82A46B;
-            text-align: center;
-            padding: 13px 0;
-            height: 15vh;
-        }
-        #final h2 {
-            color: #fff;
-            font-family: "Higuen Elegant Serif", serif;
-            font-size: 30px;
-            font-weight: bold;
-        }
-        #final p {
-            color: #fff;
-            font-family: "Higuen Elegant Serif", serif;
-            font-size: 20px;
-            font-weight: bold;
         }
 
         /**********************/

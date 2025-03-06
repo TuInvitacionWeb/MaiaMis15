@@ -63,82 +63,69 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    const contenedorCarrusel = document.querySelector(".contenedor-carrusel");
+    const elementosAObservar = document.querySelectorAll(
+        ".contenedor-carrusel, .contenido-ubicacion, .contenedor-foto, .sobremi, .contenedor-form"
+    );
 
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                contenedorCarrusel.classList.add("mostrar");
+                entry.target.classList.add("mostrar");
+            } else {
+                entry.target.classList.remove("mostrar"); // Permite que la animación se ejecute en ambas direcciones
             }
         });
     }, {
         threshold: 0.3 // Se activa cuando el 30% del elemento es visible
     });
 
-    observer.observe(contenedorCarrusel);
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    const contenidoUbicacion = document.querySelector(".contenido-ubicacion");
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                contenidoUbicacion.classList.add("mostrar");
-            }
-        });
-    }, {
-        threshold: 0.3 // Se activa cuando el 30% del elemento es visible
-    });
-
-    observer.observe(contenidoUbicacion);
+    elementosAObservar.forEach(elemento => observer.observe(elemento));
 });
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    const contenedorFoto = document.querySelector(".contenedor-foto");
+    const finalSeccion = document.querySelector("#final");
 
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                contenedorFoto.classList.add("mostrar");
+                finalSeccion.classList.add("mostrar");
             }
         });
-    }, {
-        threshold: 0.3 // Se activa cuando el 30% del elemento es visible
-    });
+    }, { threshold: 0.3 });
 
-    observer.observe(contenedorFoto);
+    observer.observe(finalSeccion);
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const sobremi = document.querySelector(".sobremi");
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                sobremi.classList.add("mostrar");
-            }
-        });
-    }, {
-        threshold: 0.3 // Se activa cuando el 30% del elemento es visible
-    });
 
-    observer.observe(sobremi);
-});
 
 document.addEventListener("DOMContentLoaded", function () {
-    const contenedorForm = document.querySelector(".contenedor-form");
+    const contenedorBurbujas = document.querySelector(".burbujas");
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                contenedorForm.classList.add("mostrar");
-            }
-        });
-    }, {
-        threshold: 0.3 // Se activa cuando el 30% del elemento es visible
-    });
+    function crearBurbuja() {
+        const burbuja = document.createElement("span");
+        burbuja.classList.add("burbuja");
 
-    observer.observe(contenedorForm);
+        // Posición horizontal aleatoria
+        burbuja.style.left = Math.random() * 100 + "vw";
+
+        // Tamaño aleatorio de las burbujas
+        const size = Math.random() * 20 + 10; // Entre 10px y 30px
+        burbuja.style.width = size + "px";
+        burbuja.style.height = size + "px";
+
+        // Duración de la animación aleatoria para que no todas las burbujas suban igual
+        burbuja.style.animationDuration = Math.random() * 3 + 4 + "s"; // Entre 4s y 7s
+
+        contenedorBurbujas.appendChild(burbuja);
+
+        // Eliminar la burbuja cuando termine su animación
+        setTimeout(() => {
+            burbuja.remove();
+        }, 7000);
+    }
+
+    // Crear burbujas cada 500ms
+    setInterval(crearBurbuja, 500);
 });
