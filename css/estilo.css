@@ -29,10 +29,7 @@
             align-items: center;
         }
 
-        #inicio .mostrar{
-           
-        }
-
+        
 
         #inicio .contenido header {
             background-color: #82A46B;
@@ -72,6 +69,29 @@
             font-weight: 400;
             transition: .5s;
         }
+        
+        
+          
+          @keyframes sonajero {
+            0%, 100% {
+              transform: rotate(-5deg); /* Comienza y termina en una posición ligeramente inclinada */
+            }
+            50% {
+              transform: rotate(5deg); /* Gira ligeramente en sentido contrario */
+            }
+          }
+
+          @keyframes brillo {
+            0% {
+              text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+            }
+            50% {
+              text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.8);
+            }
+            100% {
+              text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+            }
+          }
 
         .mis-15 {
             font-family: 'Dancing Script', cursive;
@@ -81,7 +101,7 @@
             text-align: center; /* Centrar el texto */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra suave */
             margin-top: 20px; /* Espaciado superior */
-            
+            animation: movimiento 2s ease-out, sonajero 1s ease-in-out infinite, brillo 1.5s infinite alternate;
         }
         
         #inicio .contenido header .contenido-header nav ul li a:hover {
