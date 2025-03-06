@@ -567,27 +567,6 @@
             justify-content: center; /* Centra el contenido en el medio de la pantalla */
         }
 
-        #regalo .contenedor-foto {
-            max-width: 250px;
-            margin-right: 40px;
-        }
-
-        .contenedor-foto{
-            opacity: 0;
-            transition: opacity 2s ease-out, transform 2s ease-out;
-        }
-
-        .contenedor-foto.mostrar{
-            opacity: 1;
-        }
-
-        #regalo .contenedor-foto img {
-            padding: 20px;
-            max-width: 100%;
-            border-radius: 20px;
-            background-color: #f3f3f3;
-        }
-
         #regalo .sobremi {
             display: flex;
             justify-content: center; /* Centra el texto dentro del contenedor */
@@ -605,24 +584,48 @@
             opacity: 1;
         }
 
+
+        .icono-regalo {
+            text-align: center;
+            margin-bottom: 10px; /* Espacio entre el ícono y el marco */
+        }
+        .icono-regalo img {
+            width: 85px;
+            animation: giftBounce 1.5s infinite ease-in-out;
+        }
+        
+        
+        /* Animación para que el ícono haga un pequeño rebote */
+        @keyframes giftBounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
         #regalo .sobremi h2 {
             font-size: 35px;
-            color: #fff;
             font-weight: bold;
             margin: 0;
             letter-spacing: 2px;
             font-family: "Higuen Elegant Serif", serif;
+            text-align: center;
+            background: linear-gradient(150deg, #8a8ad3, #ffffff); 
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
         }
 
         #regalo .sobremi h2 span {
-            color: #82A46B;
-            font-family: "Higuen Elegant Serif", serif;;
+            font-family: "Higuen Elegant Serif", serif;
+            font-weight: bold;
+            background: linear-gradient(130deg, #82A46B, #ffffff); /* Un degradado más sutil para destacar */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         /* Marco decorativo */
         .marco {
             position: relative;
-            padding: 20px;
+            padding: 10px 15px;
             background: linear-gradient(135deg, rgba(139, 118, 177, 0.8), rgba(130, 164, 107, 0.6)); /* Gradiente suave */
             border-radius: 20px; /* Bordes suaves */
             display: inline-block;
@@ -630,6 +633,7 @@
             background-clip: padding-box; /* Para evitar que el borde quede sobre el fondo */
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra difusa */
             animation: borderAnimation 1.5s ease-in-out infinite; /* Animación de borde */
+            animation: giftBounce 1.5s infinite ease-in-out;
         }
         @keyframes borderAnimation {
             0% {
@@ -641,12 +645,6 @@
             100% {
                 border-color: #82A46B;
             }
-        }
-
-        .marco h2 {
-            margin: 0;
-            padding: 0;
-            color: #fff;
         }
 
         /* ALIAS*/
@@ -945,7 +943,7 @@
             }
         
             #regalo .sobremi h2 {
-                font-size: 25px; /* Reducir tamaño de fuente */
+                font-size: 23px; /* Reducir tamaño de fuente */
                 padding: auto;
             }
             #regalo .sobremi .marco{
