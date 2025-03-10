@@ -13,7 +13,7 @@
             background-color: #82A46B;
             text-align: center;
             padding: 13px 0;
-            height: 15vh;
+            height: 14vh;
             opacity: 0;
             transform: translateY(50px);
             transition: opacity 0.8s ease-out, transform 0.8s ease-out;
