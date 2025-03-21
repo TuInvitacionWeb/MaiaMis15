@@ -516,7 +516,17 @@
             font-weight: bold;
         }
 
+
         /* Botones */
+
+        .vermas{
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            margin: 5px;
+        }
         .botones {
             display: flex;
             justify-content: center;
